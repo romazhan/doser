@@ -31,6 +31,7 @@ if __name__ == '__main__':
 ## Расширенный пуск
 
 ```python
+from typing import Any
 from dos import Doser, AlwaysRandomValue
 from aiohttp import ClientResponse
 import multiprocessing as mp
@@ -39,7 +40,7 @@ import string, time
 
 _TIMEOUT_SEC = 7
 
-def _url_format_callback(url: str, *_: any) -> str:
+def _url_format_callback(url: str, *_: Any) -> str:
     return url.format(AlwaysRandomValue((2225, 2700), extra_chars=' ')())
 
 async def _response_callback(response: ClientResponse, i: int, pid: int) -> None:
@@ -85,4 +86,4 @@ if __name__ == '__main__':
 ## Протестирован на
 
 - Windows 11
-- [Python v3.11.4](https://www.python.org/downloads)
+- [Python v3.11.4](https://www.python.org/downloads/release/python-3114/)
