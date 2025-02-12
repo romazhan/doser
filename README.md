@@ -62,7 +62,7 @@ def _main(cpu_count: int) -> None:
         },
         data={
             'login': AlwaysRandomValue(12, string.digits),
-            'password': AlwaysRandomValue((9, 15)),
+            'password': AlwaysRandomValue((9, 15))
         },
         cookies={
             'name': 'value'
